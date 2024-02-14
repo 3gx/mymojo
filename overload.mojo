@@ -7,11 +7,12 @@ fn foo(name: String):
     print("string:", name)
 
 fn foo(name: MyString):
-    print("myString:", name)
+    print("myString:")
 
 fn call_foo():
     let string = "Hello"
     foo(MyString(string))
+    foo(String(string))
 
 fn main():
     call_foo()
