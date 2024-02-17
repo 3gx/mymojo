@@ -9,6 +9,12 @@ struct OurBool:
         ]()
        }
 
+    fn __init__(value: __mlir_type.i1) -> Self:
+       return Self { value: value }
+
+alias OurTrue = OurBool(__mlir_attr.`true`)
+alias OurFalse = OurBool(__mlir_attr.`false`)
+
 def main():
     let a = OurBool()
     let b = a
